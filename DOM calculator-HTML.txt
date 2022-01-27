@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <style>
+    button {
+      background-color: lightgray;
+      border: none;
+    }
+
+    .Math {
+      color: blue;
+    }
+
+    #T1 {
+      height: 40px;
+      width: 100%;
+      background-color: rgb(174, 175, 177);
+      opacity: 0.5;
+    }
+
+    .col-3 {
+      height: 7cm;
+      background-color: lightgray;
+      padding-top: 10px;
+      border: rgb(146, 149, 151) solid 5px;
+
+    }
+
+    #title {
+      padding-left: 150px;
+    }
+
+    #result {
+      width: 100%
+    }
+  </style>
+</head>
+
+<body style="margin-left: 35%;">
+  <h1 id="title">Calculator</h1>
+  <p id="description">Calculator is used to do arithmetic equations like Add, Subtract, Multiply, Divide</p>
+  <div class="container-fluid" style="padding: 9%;">
+    <div class="row">
+      <div class="col-3" style="width: 42%;">
+        <div>
+          <input type="text" id="result" placeholder="0" onkeypress="return isNumber(event)">
+        </div>
+        <div class="row" style="padding-top:  10px;">
+          <div class=col-1></div>
+          <button id="clear" type="button" style="width: 55px; color: red ; " onclick="clr()">c</button>
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="del()">&#8592</button>
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="dis('.')">.</button>
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" class="Math" onclick="dis('*')">x</button>
+          <div class=col-1></div>
+        </div>
+
+        <div class="row" style="padding-top:  10px;">
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="dis('7')">7</button>
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="dis('8')">8</button>
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="dis('9')">9</button>
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" class="Math" onclick="dis('/')">/</button>
+          <div class=col-1></div>
+        </div>
+
+        <div class="row" style="padding-top:  10px">
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="dis('4')">4</button>
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="dis('5')">5</button>
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="dis('6')">6</button>
+          <div class=col-1></div>
+          <button id="subtract" type="button" style="width: 55px;" class="Math" onclick="dis('-')">-</button>
+          <div class=col-1></div>
+        </div>
+
+        <div class="row" style="padding-top:  10px">
+          <div class=col-1></div>
+          <button id="1" type="button" style="width: 55px;" onclick="dis('1')">1</button>
+          <div class=col-1></div>
+          <button id="2" type="button" style="width: 55px;" onclick="dis('2')">2</button>
+          <div class=col-1></div>
+          <button id="3" type="button" style="width: 55px;" onclick="dis('3')">3</button>
+          <div class=col-1></div>
+          <button id="add" type="button" style="width: 55px;" class="Math" onclick="dis('+')">+</button>
+          <div class=col-1></div>
+        </div>
+
+        <div class="row" style="padding-top:  10px">
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="dis('0')">0</button>
+          <div class=col-1></div>
+          <button type="button" style="width: 55px;" onclick="dis('00')">00</button>
+          <div class=col-2></div>
+          <button id="equal" type="button" style="width: 90px;" class="btn btn-primary" onclick="solve()">=</button>
+          <div class=col-1></div>
+        </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
